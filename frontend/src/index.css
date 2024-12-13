@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Header Styles */
+.header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.header__logo img {
+  width: 150px;
+}
+
+.header__menu ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__menu ul li {
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+.header__menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.header__menu ul li a:hover {
+  color: #f39c12;
+}
+
+/* Sidebar Styles */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  z-index: 998;
+}
+
+.sidebar-overlay.active {
+  display: block;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: #444;
+  color: #fff;
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar-menu ul {
+  padding: 20px;
+  list-style: none;
+}
+
+.sidebar-menu ul li {
+  margin: 15px 0;
+}
+
+.sidebar-menu ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.sidebar-menu ul li a:hover {
+  color: #f39c12;
+}
+
+.hamburger-icon {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Language Select */
+select {
+  background: #222;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .header__menu {
+    display: none;
+  }
+
+  .header .col-lg-8 {
+    display: none;
+  }
+}
